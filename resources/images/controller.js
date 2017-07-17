@@ -1,4 +1,4 @@
-const Image = require('../../models/restaurant');
+const Image = require('../../models/images');
 
 let controller = {};
 

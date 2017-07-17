@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 // PORT
-const PORT = process.argv[2] || process.env.PORT || 3000;
+const PORT = process.argv[2] || process.env.PORT || 8000;
 
 const cors = require("cors");
 app.use(cors());

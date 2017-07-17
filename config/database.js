@@ -2,21 +2,21 @@ const pgp = require("pg-promise")({});
 
 let config;
 
-if (process.env.NODE_ENV === "text") {
+// if (process.env.NODE_ENV === "test") {
     config = {
         host: "localhost",
         database: "pic_square_db",
         port: 5432,
         user: "kevinxu"
     }
-} else {
-    config = {
-        host: process.env.DB_HOST,
-        database: process.env.DB_NAME,
-        port: process.env.DB_PORT,
-        user: process.env.DB_USER
-    }
-}
+// } else {
+//     config = {
+//         host: process.env.DB_HOST,
+//         database: process.env.DB_NAME,
+//         port: process.env.DB_PORT,
+//         user: process.env.DB_USER
+//     }
+// }
 
 let db;
 
