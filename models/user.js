@@ -19,11 +19,18 @@ User.create = (user) => {
         `, [user.first_name, user.last_name, user.email, user.password]);
 }
 
-User.findByEmail = (user) => {
+User.findByEmail = (email) => {
     return db.oneOrNone(`
         SELECT * FROM users
-        WHERE email = $1
-        `, [user.email]);
+        WHERE email = $1;
+        `, [email]);
+}
+
+User.findById = (id) => {
+    return db.oneOrNone(`
+        SELECT * FROM users
+        WHERE id = $1;
+        `, [id]);
 }
 
 module.exports = User;

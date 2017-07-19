@@ -17,7 +17,7 @@ DROP TABLE IF EXISTS images;
 
 CREATE TABLE images (
     id SERIAL PRIMARY KEY,
-    img_url VARCHAR(255),
+    img_url TEXT,
     user_id INTEGER REFERENCES users(id)
 );
 
